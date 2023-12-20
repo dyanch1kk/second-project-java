@@ -1,9 +1,11 @@
 package org.example;
 
 public class IUStudent extends Student {
-    public IUStudent(String surname, String name, String otchestvo, int course) {
-        super(surname, name, otchestvo, course);
+    public IUStudent(String surname, String name, String otchestvo, int course, int mark) {
+        super(surname, name, otchestvo, course, mark);
     }
+
+
 
     @Override
     public void writeExam() {

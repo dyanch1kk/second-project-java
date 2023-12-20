@@ -31,9 +31,17 @@ public class Main {
 //
 //        CanPlayGames canPlayGames2 = cat;
 //        canPlayGames2.playGame();
-        MathStudent stud1 = new MathStudent("Murashkina","Diana","Valer'evna",3);
-        IUStudent stud2 = new IUStudent("Milashkina","Milana","Alexandovna",4);
+        MathStudent stud1 = new MathStudent("Murashkina","Diana","Valer'evna",3,4);
+        IUStudent stud2 = new IUStudent("Milashkina","Milana","Alexandovna",4,5);
         stud1.writeExam();
         stud2.writeExam();
+        StrSort a = new StrSort();
+        a.add("i love");
+        a.add("small");
+        a.add("kittens");
+        a.add("<3");
+
+        System.out.println("Element with max lenght: " + a.getMax());
+        System.out.println("Srednee znachenie dlinii: " + a.getSr());
     }
 }

@@ -7,11 +7,12 @@ public abstract class Student {
     private final String name;
     private final String otchestvo;
     private int course;
+    private int mark;
 
 
 
     //конструктор для характеристик
-    public Student(String surname, String name, String otchestvo,int course) {
+    public Student(String surname, String name, String otchestvo,int course,int mark) {
         this.surname = surname;
         this.name = name;
         this.otchestvo = otchestvo;
@@ -21,6 +22,12 @@ public abstract class Student {
         else{
             this.course = course;
         }
+        if (mark < 1 || mark > 6){
+            throw new RuntimeException("Mark invalid");
+        }
+        else{
+            this.mark = mark;
+        }
     }
 
 
@@ -28,7 +35,9 @@ public abstract class Student {
 
     @Override
     public String toString() {
-        return "Student " + surname + " " + name + " " + otchestvo + ":\n" + "Studying at the " + course + " course\n";
+        return "Student " + surname + " " + name + " " + otchestvo + ":\n"
+                + "Studying at the " + course + " course\n"
+                + "Last mark: " + mark + "\n";
     }
     //его нужно реализовать в дочерних классах
 }
